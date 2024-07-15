@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
+}
+
+body * {
+  font-family: "inter", sans-serif;
+  color: var(--text-color);
+}
+
+:root {
+  --text-color: #000000;
+  --bg-url: url(./assetsPages/wallpaper-cla.jpeg);
+  --switch-bg-url: url(./assetsPages/contrast-outline.svg);
+}
+
+.dark {
+  --text-color: #fff;
+  --bg-url: url(./assetsPages/wallpaper-esc.jpeg);
+  --switch-bg-url: url(./assetsPages/contrast.svg);
+}
+
+#container {
+  height: 712px;
+  width: 360px;
+  margin: 56px auto 0px;
+}
+
+#about {
+  display: block;
+  height: 500px;
+  width: 426px;
+  margin: 56px auto;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.1); /* variavel */
+  border: 1px solid var(--text-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+#about h2 {
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+#about p {
+  text-align: justify;
+  font-size: 16px;
+  font-weight: 600;
+  word-spacing: -0.2px;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assetsPages/Panda.jpg);
+  }
+
+  .dark {
+    --bg-url: url(./assetsPages/Panda-esc.jpeg);
+  }
+}
