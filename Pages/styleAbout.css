@@ -35,7 +35,7 @@ body * {
 #switch {
   position: relative;
   width: 64px;
-  margin: 50px auto;
+  margin: 56px auto 0px auto;
 }
 
 .dark #switch button {
