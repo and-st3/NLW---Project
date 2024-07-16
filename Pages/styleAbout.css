@@ -32,22 +32,85 @@ body * {
   margin: 56px auto 0px;
 }
 
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 50px auto;
+}
+
+.dark #switch button {
+  right: 0;
+  left: initial;
+  animation: slide-in 0.3s forwards;
+}
+
+#switch button {
+  width: 30px;
+  height: 30px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+  animation: slide-back 0.3s;
+}
+
+#switch button:hover {
+  outline: 8px solid rgba(255, 255, 255, 0.1);
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--text-color);
+  border-radius: 9999px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
 #about {
   display: block;
   height: 500px;
   width: 426px;
   margin: 56px auto;
   padding: 15px;
-  background: rgba(0, 0, 0, 0.1); /* variavel */
+  background: rgba(0, 0, 0, 0.1);
   border: 1px solid var(--text-color);
   border-radius: 8px;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  transition: all 0.4s;
+}
+
+#about:hover {
+  background-color: rgba(255, 109, 236, 0.481);
+  border: 1px solid;
+  color: rgb(2, 255, 251);
+  h2 {
+    color: rgba(2, 255, 251, 0.86);
+  }
+  p {
+    color: rgba(2, 255, 251, 0.86);
+  }
+  img {
+    opacity: 10;
+  }
+}
+
+#about img {
+  width: 36px;
+  height: 36px;
+  transition: 0.6s;
 }
 
 #about h2 {
   margin-bottom: 5px;
   font-weight: 700;
+  transition: 0.4s;
 }
 
 #about p {
@@ -55,6 +118,78 @@ body * {
   font-size: 16px;
   font-weight: 600;
   word-spacing: -0.2px;
+  transition: 0.4s;
+}
+
+#btn div {
+  display: block;
+  height: 500px;
+  width: 426px;
+}
+
+ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 24px 0px;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 200px;
+  margin: 0px auto;
+  padding: 16px 24px;
+  background: rgba(0, 0, 0, 0.1); /* variavel */
+  border: 1px solid var(--text-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  font-weight: 500;
+  text-decoration: none;
+
+  transition: all 0.4s;
+}
+
+ul li a:hover {
+  background-color: rgba(255, 109, 236, 0.481);
+  border: 1px solid;
+  color: rgb(2, 255, 251);
+  img {
+    opacity: 10;
+  }
+}
+
+ul li a img {
+  width: 36px;
+  height: 36px;
+  transition: 0.6s;
+}
+
+#iconPanda1 {
+  position: absolute;
+  left: -30px;
+  top: -16px;
+}
+
+#iconPanda2 {
+  position: absolute;
+  right: -30px;
+  bottom: -16px;
+}
+
+.img-panda {
+  display: flex;
+  min-width: 30px;
+  min-height: 30px;
+  margin: 0px 15px;
+
+  opacity: 0;
 }
 
 @media (min-width: 700px) {
@@ -64,5 +199,22 @@ body * {
 
   .dark {
     --bg-url: url(./assetsPages/Panda-esc.jpeg);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }

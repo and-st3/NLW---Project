@@ -20,18 +20,62 @@
   </head>
   <body>
     <div class="container">
-      <div id="about">
-        <h2>Sobre:</h2>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde et
-          consectetur dolore recusandae numquam blanditiis rerum molestias enim
-          dolorem suscipit quas, delectus placeat consequuntur praesentium,
-          neque ad illo debitis natus.
-        </p>
+      <div id="switch" onclick="toggleMode()">
+        <button></button>
+        <span></span>
       </div>
-      <div>
-        <a href="/index.html">aaaaaa</a>
+      <div id="about">
+        <h2>Sobre</h2>
+        <p>
+          Essa página se refere a papelaria fofoPanda, todos os links são parte
+          da loja em atendimento online, a papelaria vende produtos de boa
+          qualidade e acessíveis, com diferentes estilos e modelos. Caso queira
+          entrar em contato acesse os links da pagina principal como WhatsApp,
+          Instagram ou Email.
+        </p>
+        <img
+          class="img-panda"
+          id="iconPanda1"
+          src="./assetsPages/kisspanda.png"
+          alt="lovepanda"
+        />
+        <img
+          class="img-panda"
+          id="iconPanda2"
+          src="./assetsPages/lovepanda.png"
+          alt="lovepanda"
+        />
+      </div>
+      <div id="btn">
+        <ul>
+          <li>
+            <a href="/index.html">
+              <img
+                class="img-panda"
+                id="iconPanda1"
+                src="./assetsPages/kisspanda.png"
+                alt="kisspanda"
+              />
+              Voltar
+              <img
+                class="img-panda"
+                id="iconPanda2"
+                src="./assetsPages/lovepanda.png"
+                alt="lovepanda"
+              />
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./script.js"></script>
   </body>
 </html>
